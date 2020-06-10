@@ -217,19 +217,19 @@
         <changes>
           <definition xsi:type="configure" id="hdp_2_4_0_0_webhcat_server_update_configuration_paths" summary="Updating Configuration Paths">
             <type>webhcat-site</type>
-            <replace key="templeton.jar" find="/usr/hdp/current/hive-webhcat" replace-with="/usr/hdp/${hdp.version}/hive"/>
-            <replace key="templeton.libjars" find="/usr/hdp/current/zookeeper-client" replace-with="/usr/hdp/${hdp.version}/zookeeper,/usr/hdp/${hdp.version}/hive/lib/hive-common.jar"/>
-            <replace key="templeton.hadoop" find="/usr/hdp/current/hadoop-client" replace-with="/usr/hdp/${hdp.version}/hadoop"/>
-            <replace key="templeton.hcat" find="/usr/hdp/current/hive-client" replace-with="/usr/hdp/${hdp.version}/hive"/>
+            <replace key="templeton.jar" find="/usr/ddp/current/hive-webhcat" replace-with="/usr/hdp/${hdp.version}/hive"/>
+            <replace key="templeton.libjars" find="/usr/ddp/current/zookeeper-client" replace-with="/usr/hdp/${hdp.version}/zookeeper,/usr/hdp/${hdp.version}/hive/lib/hive-common.jar"/>
+            <replace key="templeton.hadoop" find="/usr/ddp/current/hadoop-client" replace-with="/usr/hdp/${hdp.version}/hadoop"/>
+            <replace key="templeton.hcat" find="/usr/ddp/current/hive-client" replace-with="/usr/hdp/${hdp.version}/hive"/>
             <set key="templeton.hive.extra.files" value="/usr/hdp/${hdp.version}/tez/conf/tez-site.xml,/usr/hdp/${hdp.version}/tez,/usr/hdp/${hdp.version}/tez/lib"/>
           </definition>
 
           <definition xsi:type="configure" id="hdp_2_5_0_0_webhcat_server_update_configuration_paths" summary="Updating Configuration Paths">
             <type>webhcat-site</type>
-            <replace key="templeton.jar" find="/usr/hdp/current/hive-webhcat" replace-with="/usr/hdp/${hdp.version}/hive"/>
-            <replace key="templeton.libjars" find="/usr/hdp/current/zookeeper-client" replace-with="/usr/hdp/${hdp.version}/zookeeper,/usr/hdp/${hdp.version}/hive/lib/hive-common.jar"/>
-            <replace key="templeton.hadoop" find="/usr/hdp/current/hadoop-client" replace-with="/usr/hdp/${hdp.version}/hadoop"/>
-            <replace key="templeton.hcat" find="/usr/hdp/current/hive-client" replace-with="/usr/hdp/${hdp.version}/hive"/>
+            <replace key="templeton.jar" find="/usr/ddp/current/hive-webhcat" replace-with="/usr/hdp/${hdp.version}/hive"/>
+            <replace key="templeton.libjars" find="/usr/ddp/current/zookeeper-client" replace-with="/usr/hdp/${hdp.version}/zookeeper,/usr/hdp/${hdp.version}/hive/lib/hive-common.jar"/>
+            <replace key="templeton.hadoop" find="/usr/ddp/current/hadoop-client" replace-with="/usr/hdp/${hdp.version}/hadoop"/>
+            <replace key="templeton.hcat" find="/usr/ddp/current/hive-client" replace-with="/usr/hdp/${hdp.version}/hive"/>
             <set key="templeton.hive.extra.files" value="/usr/hdp/${hdp.version}/tez/conf/tez-site.xml,/usr/hdp/${hdp.version}/tez,/usr/hdp/${hdp.version}/tez/lib"/>
           </definition>
 

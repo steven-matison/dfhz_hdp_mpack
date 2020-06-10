@@ -233,7 +233,7 @@
   </property>
   <property>
     <name>spark.sql.hive.metastore.jars</name>
-    <value>/usr/hdp/current/spark2-client/standalone-metastore/*</value>
+    <value>/usr/ddp/current/spark2-client/standalone-metastore/*</value>
     <description></description>
     <on-ambari-upgrade add="false"/>
   </property>

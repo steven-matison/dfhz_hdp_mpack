@@ -46,7 +46,7 @@
 
       <execute-stage service="SLIDER" component="SLIDER" title="Stop Long Running Applications on Slider">
         <task xsi:type="manual">
-          <message>Before continuing, please stop all long-running applications deployed using Slider. E.g., su - yarn "/usr/hdp/current/slider-client/bin/slider stop &lt;app_name&gt;"</message>
+          <message>Before continuing, please stop all long-running applications deployed using Slider. E.g., su - yarn "/usr/ddp/current/slider-client/bin/slider stop &lt;app_name&gt;"</message>
         </task>
       </execute-stage>
 

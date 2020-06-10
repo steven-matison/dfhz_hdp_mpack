@@ -19,12 +19,12 @@
     <os family="redhat7">
         <repo>
             <baseurl>https://makeopensourcegreatagain.com/rpms/</baseurl>
-            <repoid>mosga-3x</repoid>
+            <repoid>mosga-ambari-2.7.5</repoid>
             <reponame>MOSGA</reponame>
         </repo>
         <repo>
             <baseurl>https://makeopensourcegreatagain.com/repos/HDP-3.1.4.0</baseurl>
-            <repoid>mosga-hdp3x</repoid>
+            <repoid>mosga-hdp3</repoid>
             <reponame>MOSGA</reponame>
         </repo>
     </os>

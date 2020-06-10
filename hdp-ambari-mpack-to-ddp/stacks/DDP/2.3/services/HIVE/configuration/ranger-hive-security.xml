@@ -45,7 +45,7 @@
   </property>
   <property>
     <name>ranger.plugin.hive.policy.rest.ssl.config.file</name>
-    <value>/usr/hdp/current/hive-server2/conf/conf.server/ranger-policymgr-ssl.xml</value>
+    <value>/usr/ddp/current/hive-server2/conf/conf.server/ranger-policymgr-ssl.xml</value>
     <description>Path to the file containing SSL details to contact Ranger Admin</description>
     <on-ambari-upgrade add="false"/>
   </property>

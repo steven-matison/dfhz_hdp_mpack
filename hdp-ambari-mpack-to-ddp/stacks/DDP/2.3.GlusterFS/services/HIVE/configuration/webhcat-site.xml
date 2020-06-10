@@ -29,7 +29,7 @@ limitations under the License.
   <property>
     <name>templeton.hadoop.conf.dir</name>
     <display-name>Templeton Hadoop Conf directory</display-name>
-    <value>/usr/hdp/current/hadoop-client/conf</value>
+    <value>/usr/ddp/current/hadoop-client/conf</value>
     <description>The path to the Hadoop configuration.</description>
     <on-ambari-upgrade add="true"/>
   </property>

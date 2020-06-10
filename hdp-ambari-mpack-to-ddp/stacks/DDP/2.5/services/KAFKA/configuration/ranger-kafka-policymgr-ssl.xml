@@ -21,13 +21,13 @@
 <configuration>
   <property>
     <name>xasecure.policymgr.clientssl.keystore</name>
-    <value>/usr/hdp/current/kafka-broker/config/ranger-plugin-keystore.jks</value>
+    <value>/usr/ddp/current/kafka-broker/config/ranger-plugin-keystore.jks</value>
     <description>Java Keystore files</description>
     <on-ambari-upgrade add="true"/>
   </property>
   <property>
     <name>xasecure.policymgr.clientssl.truststore</name>
-    <value>/usr/hdp/current/kafka-broker/config/ranger-plugin-truststore.jks</value>
+    <value>/usr/ddp/current/kafka-broker/config/ranger-plugin-truststore.jks</value>
     <description>java truststore file</description>
     <on-ambari-upgrade add="true"/>
   </property>

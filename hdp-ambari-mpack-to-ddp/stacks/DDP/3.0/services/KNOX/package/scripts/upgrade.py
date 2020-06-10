@@ -108,7 +108,7 @@ def seed_current_data_directory():
   versions. This side-effect behavior causes loss of service in clusters where Knox is using
   custom keystores.
 
-  cp -R -p -f /usr/hdp/<old>/knox-server/data/. /usr/hdp/current/knox-server/data
+  cp -R -p -f /usr/hdp/<old>/knox-server/data/. /usr/ddp/current/knox-server/data
   :return:
   """
   import params

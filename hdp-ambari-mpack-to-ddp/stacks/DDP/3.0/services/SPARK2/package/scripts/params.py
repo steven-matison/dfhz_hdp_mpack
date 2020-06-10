@@ -163,7 +163,7 @@ if sac_enabled:
                                             "atlas.rest.address", "atlas.authentication.method.kerberos.principal", "atlas.authentication.method.kerberos",
                                             "atlas.authentication.method.kerberos.keytab"]
   application_properties = dict(config['configurations']['application-properties'])
-  spark_atlas_jar_dir = "/usr/hdp/current/spark-atlas-connector/"
+  spark_atlas_jar_dir = "/usr/ddp/current/spark-atlas-connector/"
   if security_enabled:
     atlas_kafka_keytab = default("/configurations/spark2-atlas-application-properties-override/atlas.jaas.KafkaClient.option.keyTab", None)
     kafka_user = config['configurations']['kafka-env']['kafka_user']

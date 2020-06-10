@@ -21,7 +21,7 @@
 <configuration supports_final="true">
   <property>
     <name>ranger.tagsync.keystore.filename</name>
-    <value>/usr/hdp/current/ranger-tagsync/conf/rangertagsync.jceks</value>
+    <value>/usr/ddp/current/ranger-tagsync/conf/rangertagsync.jceks</value>
     <description>Keystore file</description>
     <value-attributes>
       <empty-value-valid>true</empty-value-valid>
@@ -30,7 +30,7 @@
   </property>
   <property>
     <name>ranger.tagsync.source.atlasrest.keystore.filename</name>
-    <value>/usr/hdp/current/ranger-tagsync/conf/atlasuser.jceks</value>
+    <value>/usr/ddp/current/ranger-tagsync/conf/atlasuser.jceks</value>
     <description>Tagsync atlasrest keystore file</description>
     <value-attributes>
       <empty-value-valid>true</empty-value-valid>
