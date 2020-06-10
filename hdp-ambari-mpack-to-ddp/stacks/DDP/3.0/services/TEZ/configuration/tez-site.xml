@@ -29,7 +29,7 @@
   </property>
   <property>
     <name>tez.cluster.additional.classpath.prefix</name>
-    <value>/usr/hdp/${hdp.version}/hadoop/lib/hadoop-lzo-0.6.0.${hdp.version}.jar:/etc/hadoop/conf/secure</value>
+    <value>/usr/ddp/${hdp.version}/hadoop/lib/hadoop-lzo-0.6.0.${hdp.version}.jar:/etc/hadoop/conf/secure</value>
     <description/>
     <on-ambari-upgrade add="false"/>
   </property>
@@ -80,7 +80,7 @@
   </property>
   <property>
     <name>tez.am.launch.env</name>
-    <value>LD_LIBRARY_PATH=/usr/hdp/${hdp.version}/hadoop/lib/native:/usr/hdp/${hdp.version}/hadoop/lib/native/Linux-{{architecture}}-64</value>
+    <value>LD_LIBRARY_PATH=/usr/ddp/${hdp.version}/hadoop/lib/native:/usr/ddp/${hdp.version}/hadoop/lib/native/Linux-{{architecture}}-64</value>
     <description>
         Additional execution environment entries for tez. This is not an additive property. You must preserve the original value if
         you want to have access to native libraries.
@@ -126,7 +126,7 @@
   </property>
   <property>
     <name>tez.task.launch.env</name>
-    <value>LD_LIBRARY_PATH=/usr/hdp/${hdp.version}/hadoop/lib/native:/usr/hdp/${hdp.version}/hadoop/lib/native/Linux-{{architecture}}-64</value>
+    <value>LD_LIBRARY_PATH=/usr/ddp/${hdp.version}/hadoop/lib/native:/usr/ddp/${hdp.version}/hadoop/lib/native/Linux-{{architecture}}-64</value>
     <description>
       Additional execution environment entries for tez. This is not an additive property. You must preserve the original value if
       you want to have access to native libraries.

@@ -22,19 +22,19 @@ limitations under the License.
 <configuration supports_final="true">
   <property>
     <name>templeton.jar</name>
-    <value>/usr/hdp/${hdp.version}/hive/share/webhcat/svr/lib/hive-webhcat-*.jar</value>
+    <value>/usr/ddp/${hdp.version}/hive/share/webhcat/svr/lib/hive-webhcat-*.jar</value>
     <description>The path to the Templeton jar file.</description>
     <on-ambari-upgrade add="true"/>
   </property>
   <property>
     <name>templeton.libjars</name>
-    <value>/usr/hdp/${hdp.version}/zookeeper/zookeeper.jar</value>
+    <value>/usr/ddp/${hdp.version}/zookeeper/zookeeper.jar</value>
     <description>Jars to add the the classpath.</description>
     <on-ambari-upgrade add="true"/>
   </property>
   <property>
     <name>templeton.hadoop</name>
-    <value>/usr/hdp/${hdp.version}/hadoop/bin/hadoop</value>
+    <value>/usr/ddp/${hdp.version}/hadoop/bin/hadoop</value>
     <description>The path to the Hadoop executable.</description>
     <on-ambari-upgrade add="true"/>
   </property>
@@ -55,7 +55,7 @@ limitations under the License.
   </property>
   <property>
     <name>templeton.hcat</name>
-    <value>/usr/hdp/${hdp.version}/hive/bin/hcat</value>
+    <value>/usr/ddp/${hdp.version}/hive/bin/hcat</value>
     <description>The path to the hcatalog executable.</description>
     <on-ambari-upgrade add="true"/>
   </property>
@@ -115,7 +115,7 @@ limitations under the License.
   <property>
     <name>templeton.hive.extra.files</name>
     <display-name>Templeton Hive Extra Files</display-name>
-    <value>/etc/tez/conf/tez-site.xml,/usr/hdp/${hdp.version}/tez,/usr/hdp/${hdp.version}/tez/lib</value>
+    <value>/etc/tez/conf/tez-site.xml,/usr/ddp/${hdp.version}/tez,/usr/ddp/${hdp.version}/tez/lib</value>
     <description>The resources in this list will be localized to the node running LaunchMapper and added to HADOOP_CLASSPTH
       before launching 'hive' command.  If the path /foo/bar is a directory, the contents of the the entire dir will be localized
       and ./foo/* will be added to HADOOP_CLASSPATH.  Note that since classpath path processing does not recurse into subdirectories,

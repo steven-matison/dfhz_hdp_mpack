@@ -1327,8 +1327,8 @@
           <task xsi:type="manual">
             <summary>Run Ranger JAVA patches</summary>
             <message>Please follow below steps on any Ranger Admin hosts:</message>
-            <message> - Export RANGER_ADMIN_HOME=/usr/hdp/{{version}}/ranger-admin and JAVA_HOME environment variables.</message>
-            <message> - Run JAVA patches command using Ranger service process user: /usr/bin/python /usr/hdp/{{version}}/ranger-admin/db_setup.py -javapatch</message>
+            <message> - Export RANGER_ADMIN_HOME=/usr/ddp/{{version}}/ranger-admin and JAVA_HOME environment variables.</message>
+            <message> - Run JAVA patches command using Ranger service process user: /usr/bin/python /usr/ddp/{{version}}/ranger-admin/db_setup.py -javapatch</message>
           </task>
 
           <task xsi:type="execute" hosts="any">
