@@ -12,6 +12,8 @@ ambari-agent start</pre>
 
 #### Management Pack Installaion
 <pre>ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-3.1.4.0.tar.gz --verbose
+
+ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-to-ddp.tar.gz --verbose
 ambari-server restart</pre>
 
 
@@ -20,4 +22,3 @@ ambari-server restart</pre>
 ambari-server restart</pre>
 
 
-ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-to-ddp.tar.gz --verbose
