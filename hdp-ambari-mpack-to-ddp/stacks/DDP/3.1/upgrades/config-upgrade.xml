@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<upgrade-config-changes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="upgrade-config.xsd">
+  <services>
+    <service name="RANGER_KMS">
+      <component name="RANGER_KMS_SERVER">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_1_ranger_kms_keysecure_configuration" summary="Updating dbks-site configurations for Ranger KMS Keysecure support">
+            <type>dbks-site</type>
+            <set key="ranger.kms.keysecure.enabled" value="false" if-type="dbks-site" if-key="ranger.kms.keysecure.enabled" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.UserPassword.Authentication" value="true" if-type="dbks-site" if-key="ranger.kms.keysecure.UserPassword.Authentication" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.masterkey.name" value="" if-type="dbks-site" if-key="ranger.kms.keysecure.masterkey.name" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.login.username" value="" if-type="dbks-site" if-key="ranger.kms.keysecure.login.username" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.login.password" value="" if-type="dbks-site" if-key="ranger.kms.keysecure.login.password" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.login.password.alias" value="ranger.ks.login.password" if-type="dbks-site" if-key="ranger.kms.keysecure.login.password.alias" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.hostname" value="" if-type="dbks-site" if-key="ranger.kms.keysecure.hostname" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.masterkey.size" value="256" if-type="dbks-site" if-key="ranger.kms.keysecure.masterkey.size" if-key-state="absent"/>
+            <set key="ranger.kms.keysecure.sunpkcs11.cfg.filepath" value="" if-type="dbks-site" if-key="ranger.kms.keysecure.sunpkcs11.cfg.filepath" if-key-state="absent"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+    <service name="RANGER">
+      <component name="RANGER_ADMIN">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_1_maint_ranger_audit_solr_bootstrap" summary="Disabling Ranger Audit Solr Bootstrap Configuration">
+            <type>ranger-admin-site</type>
+            <set key="ranger.audit.solr.bootstrap.enabled" value="false" if-type="ranger-admin-site" if-key="ranger.audit.solr.bootstrap.enabled" if-key-state="absent"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+  </services>
+</upgrade-config-changes>

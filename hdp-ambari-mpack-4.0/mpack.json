@@ -1,0 +1,20 @@
+{
+  "type": "full-release",
+  "name": "hdp-ambari-mpack",
+  "version": "0.0.0.1-0",
+  "hash": "8d2f7cf77ab335183b5482af61ad823332c57312",
+  "branch": "UNKNOWN",
+  "description": "HDP Ambari Management Pack",
+  "prerequisites": {
+    "min-ambari-version": "2.5.1.0",
+    "max-ambari-version": "2.7.5"
+  },
+  "artifacts": [
+    {
+      "name": "ddp-stack-definitions",
+      "type": "stack-definitions",
+      "source_dir": "stacks"
+    }
+  ]
+}
+

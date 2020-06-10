@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<configuration>
+  <property>
+    <name>ranger.kms.keysecure.enabled</name>
+    <display-name>Keysecure Enabled</display-name>
+    <value>false</value>
+    <description>Enable Keysecure ?</description>
+    <value-attributes>
+      <overridable>false</overridable>
+      <type>value-list</type>
+      <entries>
+        <entry>
+          <value>true</value>
+          <label>Yes</label>
+        </entry>
+        <entry>
+          <value>false</value>
+          <label>No</label>
+        </entry>
+      </entries>
+      <selection-cardinality>1</selection-cardinality>
+    </value-attributes>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.UserPassword.Authentication</name>
+    <display-name>Enable Keysecure User Password Authentication</display-name>
+    <value>true</value>
+    <description>Enable Keysecure User Password Authentication ?</description>
+    <value-attributes>
+      <overridable>false</overridable>
+      <type>value-list</type>
+      <entries>
+        <entry>
+          <value>true</value>
+          <label>Yes</label>
+        </entry>
+        <entry>
+          <value>false</value>
+          <label>No</label>
+        </entry>
+      </entries>
+      <selection-cardinality>1</selection-cardinality>
+    </value-attributes>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.masterkey.name</name>
+    <display-name>Keysecure MasterKey Name</display-name>
+    <value></value>
+    <description>Enter Keysecure MasterKey Name</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.login.username</name>
+    <display-name>Keysecure Login Username</display-name>
+    <value></value>
+    <description>Enter Keysecure Login Username</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.login.password</name>
+    <display-name>Keysecure Login Password</display-name>
+    <value></value>
+    <property-type>PASSWORD</property-type>
+    <description>Keysecure Login Password</description>
+    <value-attributes>
+      <type>password</type>
+    </value-attributes>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.login.password.alias</name>
+    <display-name>Keysecure Login Password Alias</display-name>
+    <value>ranger.ks.login.password</value>
+    <description>Enter Keysecure Login Password Alias</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.hostname</name>
+    <display-name>Keysecure Hostname</display-name>
+    <value></value>
+    <description>Enter Keysecure Hostname</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.masterkey.size</name>
+    <display-name>Keysecure Masterkey Size</display-name>
+    <value>256</value>
+    <description>Enter Keysecure Masterkey Size</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+  <property>
+    <name>ranger.kms.keysecure.sunpkcs11.cfg.filepath</name>
+    <display-name>Keysecure sunpkcs11 cfg filepath</display-name>
+    <value></value>
+    <description>Enter Keysecure sunpkcs11 cfg filepath</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+
+</configuration>
