@@ -22,7 +22,11 @@
             <repoid>mosga-3x</repoid>
             <reponame>MOSGA</reponame>
         </repo>
-
+        <repo>
+            <baseurl>https://makeopensourcegreatagain.com/repos/HDP-3.1.4.0</baseurl>
+            <repoid>mosga-hdp3x</repoid>
+            <reponame>MOSGA</reponame>
+        </repo>
         <repo>
             <baseurl>https://artifacts.elastic.co/packages/7.x/yum</baseurl>
             <repoid>elasticsearch-7.x</repoid>
