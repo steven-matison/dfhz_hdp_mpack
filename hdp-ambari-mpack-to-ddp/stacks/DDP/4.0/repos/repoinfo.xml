@@ -18,8 +18,8 @@
 <reposinfo>
     <os family="redhat7">
         <repo>
-            <baseurl>https://makeopensourcegreatagain.com/repos/ambari/2.7.5.0/</baseurl>
-            <repoid>mosga-ambari-2.7.5.0</repoid>
+            <baseurl>https://makeopensourcegreatagain.com/repos/ambari/2.7.5.0</baseurl>
+            <repoid>mosga-ambari</repoid>
             <reponame>MOSGA</reponame>
         </repo>
         <repo>
