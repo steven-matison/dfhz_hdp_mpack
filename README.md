@@ -19,7 +19,7 @@ ambari-server restart</pre>
 -- Elasticsearch, Logstash, Kibana, Beats
 -- Hue
 -- Flink
-<pre>ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-to-ddp.tar.gz --verbose
+<pre>ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-4.0.0.0.tar.gz --verbose
 ambari-server restart</pre>
 
 
