@@ -18,12 +18,24 @@
 <reposinfo>
   <os family="redhat7">
     <repo>
-        <baseurl>https://makeopensourcegreatagain.com/repos/ambari/2.7.5.0</baseurl>
+        <baseurl>https://makeopensourcegreatagain.com/repos/centos/7/ambari/2.7.5.0</baseurl>
         <repoid>mosga-ambari</repoid>
         <reponame>MOSGA</reponame>
     </repo>
     <repo>
-        <baseurl>https://makeopensourcegreatagain.com/repos/HDP-3.1.4.0</baseurl>
+        <baseurl>https://makeopensourcegreatagain.com/repos/centos/7/hdp/HDP-3.1.4.0</baseurl>
+        <repoid>mosga-hdp3</repoid>
+        <reponame>MOSGA</reponame>
+    </repo>
+  </os>
+  <os family="suse12">
+    <repo>
+        <baseurl>https://makeopensourcegreatagain.com/repos/suse/12/ambari/2.7.5.0</baseurl>
+        <repoid>mosga-ambari</repoid>
+        <reponame>MOSGA</reponame>
+    </repo>
+    <repo>
+        <baseurl>https://makeopensourcegreatagain.com/repos/suse/12/hdp</baseurl>
         <repoid>mosga-hdp3</repoid>
         <reponame>MOSGA</reponame>
     </repo>
