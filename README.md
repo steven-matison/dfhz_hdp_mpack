@@ -14,15 +14,6 @@ ambari-agent start</pre>
 <pre>ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-3.1.4.0.tar.gz --verbose
 ambari-server restart</pre>
 
-#### Management Pack Installaion - HDP 4.0.0.0
-- package includes HDP 3.1.4.0 + HDF 3.4.5 with the following Third Party Services:
--- Elasticsearch, Logstash, Kibana, Beats
--- Hue
--- Flink
-<pre>ambari-server install-mpack --mpack=https://github.com/steven-dfheinz/dfhz_hdp_mpack/raw/master/hdp-ambari-mpack-4.0.0.0.tar.gz --verbose
-ambari-server restart</pre>
-
-
 #### Management Pack Removal
 <pre>ambari-server uninstall-mpack --mpack-name=hdp-ambari-mpack
 ambari-server restart</pre>
