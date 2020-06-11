@@ -16,7 +16,6 @@
    limitations under the License.
 -->
 <reposinfo>
-  <latest>http://public-repo-1.hortonworks.com/HDP/hdp_urlinfo.json</latest>
   <os family="redhat7">
     <repo>
         <baseurl>https://makeopensourcegreatagain.com/repos/ambari/2.7.5.0</baseurl>
