@@ -56,7 +56,7 @@
 
   <property>
     <name>setup_prebuilt</name>
-    <value>true</value>
+    <value>false</value>
     <description>If false, will compile Flink from source instead</description>
   </property>   
   
