@@ -10,7 +10,7 @@ yum install ambari-server ambari-agent -y
 ambari-server setup -s
 ambari-server start
 ambari-agent start</pre>
-SUSE12
+SUSE12 (work in progress)
 <pre>wget -O /etc/zypp/repos.d/mosga-ambari.repo https://makeopensourcegreatagain.com/repos/suse/12/ambari/2.7.5.0/mosga-ambari.repo
 zypper install ambari-server ambari-agent -y
 ambari-server setup -s
