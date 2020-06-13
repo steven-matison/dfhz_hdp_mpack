@@ -1,0 +1,28 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+    "protocol":
+    {
+      "type":"HTTP_ONLY"
+    },
+
+    "links": [
+      {
+        "name": "flink_ui",
+        "label": "Flink WEB-UI",
+        "requires_user_name": "false",
+        "component_name": "FLINK",
+        "url":"%@://%@:%@/",
+        "port":{
+          "http_property": "flink.server.port",
+          "http_default_port": "8888",
+          "https_property": "flink.server.port",
+          "https_default_port": "8888",
+          "regex": "^(\\d+)$",
+          "site": "flink-site"
+        }
+      }
+    ]
+  }
+}
