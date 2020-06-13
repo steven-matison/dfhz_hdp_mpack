@@ -116,7 +116,7 @@ class Master(Script):
     #Execute('chown '+params.flink_user+':'+params.flink_group+' ' + status_params.flink_pid_file)
 
     if os.path.exists(params.temp_file):
-      os.remove(params.temp_file) s
+      os.remove(params.temp_file)
 
   def check_flink_status(self, pid_file):
     from datetime import datetime 
