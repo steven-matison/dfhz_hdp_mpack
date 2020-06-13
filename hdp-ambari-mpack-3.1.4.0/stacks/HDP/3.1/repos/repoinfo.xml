@@ -27,6 +27,11 @@
         <repoid>mosga-hdp3</repoid>
         <reponame>MOSGA</reponame>
     </repo>
+    <repo>
+        <baseurl>https://artifacts.elastic.co/packages/7.x/yum</baseurl>
+        <repoid>elasticsearch-7.x</repoid>
+        <reponame>ELASTICSEARCH</reponame>
+    </repo>
   </os>
   <os family="suse12">
     <repo>

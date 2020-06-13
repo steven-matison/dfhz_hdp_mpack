@@ -1,7 +1,7 @@
 {
   "type": "full-release",
   "name": "hdp-ambari-mpack",
-  "version": "0.0.0.1-0",
+  "version": "3.1.4.0-0",
   "hash": "8d2f7cf77ab335183b5482af61ad823332c57312",
   "branch": "UNKNOWN",
   "description": "HDP Ambari Management Pack",
@@ -10,6 +10,11 @@
     "max-ambari-version": "2.7.5"
   },
   "artifacts": [
+    {
+      "name": "hdf-service-definitions",
+      "type": "service-definitions",
+      "source_dir": "common-services"
+    },
     {
       "name": "ddp-stack-definitions",
       "type": "stack-definitions",
