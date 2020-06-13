@@ -66,7 +66,7 @@ class Master(Script):
       Execute('cd '+params.flink_install_dir+'; git clone https://github.com/apache/flink.git '+params.flink_install_dir +' >> ' + params.flink_log_file)
       Execute('chown -R ' + params.flink_user + ':' + params.flink_group + ' ' + params.flink_install_dir)
                 
-d      Execute('cd '+params.flink_install_dir+'; mvn clean install -DskipTests >> ' + params.flink_log_file, user=params.flink_user)
+      Execute('cd '+params.flink_install_dir+'; mvn clean install -DskipTests >> ' + params.flink_log_file, user=params.flink_user)
       
       #update the configs specified by user
       self.configure(env, True)
