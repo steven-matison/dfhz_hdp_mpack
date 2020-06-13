@@ -18,8 +18,8 @@
   <services>
     <service>
       <name>FLINK</name>
-      <version>1.10.0</version>
-      <extends>common-services/FLINK/1.10.0</extends>
+      <version>1.10.1</version>
+      <extends>common-services/FLINK/1.10.1</extends>
     </service>
   </services>
 </metainfo>
