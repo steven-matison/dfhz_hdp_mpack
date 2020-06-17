@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<upgrade-config-changes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="upgrade-config.xsd">
+  <services>
+
+    <service name="KAFKA">
+      <component name="KAFKA_BROKER">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_0_x_kafka_plaintext_sasl_removal">
+            <type>kafka-broker</type>
+            <set key="security.inter.broker.protocol" value="SASL_PLAINTEXT"
+                 if-type="kafka-broker" if-key="security.inter.broker.protocol" if-value="PLAINTEXTSASL"/>
+            <replace key="listeners" find="PLAINTEXTSASL" replace-with="SASL_PLAINTEXT"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+
+    <service name="ATLAS">
+      <component name="ATLAS_SERVER">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_0_x_atlas_plaintext_sasl_removal" summary="Updating Atlas security protocol for Kafka">
+            <type>application-properties</type>
+            <set key="atlas.kafka.security.protocol" value="SASL_PLAINTEXT"
+                 if-type="application-properties" if-key="atlas.kafka.security.protocol" if-key-state="present" if-value="PLAINTEXTSASL"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+
+    <service name="RANGER">
+      <component name="RANGER_TAGSYNC">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_0_x_tagsync_plaintext_sasl_removal" summary="Updating Tagsync security protocol for Kafka">
+            <type>tagsync-application-properties</type>
+            <set key="atlas.kafka.security.protocol" value="SASL_PLAINTEXT"
+                 if-type="tagsync-application-properties" if-key="atlas.kafka.security.protocol" if-key-state="present" if-value="PLAINTEXTSASL"/>
+          </definition>
+        </changes>
+      </component>
+
+      <component name="RANGER_ADMIN">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_1_0_0_ranger_services_heap_size_configuration" summary="Upgrading ranger-env configurations for Ranger service components">
+            <type>ranger-env</type>
+
+            <replace key="content" find="export RANGER_USER={{unix_user}}" replace-with="export RANGER_USER={{unix_user}}&#xA;ranger_admin_max_heap_size={{ranger_admin_max_heap_size}}&#xA;" if-key="content" if-type="ranger-env" if-key-state="present" if-value="ranger_admin_max_heap_size={{ranger_admin_max_heap_size}}" if-value-match-type="partial" if-value-not-matched="true" />
+
+            <set key="ranger_admin_max_heap_size" value="1g" if-type="ranger-env" if-key="ranger_admin_max_heap_size" if-key-state="absent"/>
+
+            <replace key="content" find="export UNIX_USERSYNC_USER={{unix_user}}" replace-with="export UNIX_USERSYNC_USER={{unix_user}}&#xA;ranger_usersync_max_heap_size={{ranger_usersync_max_heap_size}}&#xA;" if-key="content" if-type="ranger-env" if-key-state="present" if-value="ranger_usersync_max_heap_size={{ranger_usersync_max_heap_size}}" if-value-match-type="partial" if-value-not-matched="true" />
+
+            <set key="ranger_usersync_max_heap_size" value="1g" if-type="ranger-env" if-key="ranger_usersync_max_heap_size" if-key-state="absent"/>
+
+            <replace key="content" find="export UNIX_TAGSYNC_USER={{unix_user}}" replace-with="export UNIX_TAGSYNC_USER={{unix_user}}&#xA;ranger_tagsync_max_heap_size={{ranger_tagsync_max_heap_size}}&#xA;" if-key="content" if-type="ranger-env" if-key-state="present" if-value="ranger_tagsync_max_heap_size={{ranger_tagsync_max_heap_size}}" if-value-match-type="partial" if-value-not-matched="true" />
+
+            <set key="ranger_tagsync_max_heap_size" value="1g" if-type="ranger-env" if-key="ranger_tagsync_max_heap_size" if-key-state="absent"/>
+          </definition>
+          <definition xsi:type="configure" id="hdp_3_1_0_0_ranger_patch_retry_configuration" summary="Upgrading admin-properties configurations for Ranger service components">
+            <type>admin-properties</type>
+            <set key="PATCH_RETRY_INTERVAL" value="120" if-type="admin-properties" if-key="PATCH_RETRY_INTERVAL" if-key-state="absent"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+
+    <service name="RANGER_KMS">
+      <component name="RANGER_KMS_SERVER">
+        <changes>
+          <definition xsi:type="configure" id="hdp_3_1_0_0_ranger_kms_services_heap_size_configuration">
+            <type>kms-env</type>
+            <replace key="content" find="export KMS_USER={{kms_user}}" replace-with="export KMS_USER={{kms_user}}&#xA;ranger_kms_max_heap_size={{ranger_kms_max_heap_size}}&#xA;"/>
+
+            <set key="ranger_kms_max_heap_size" value="1g" if-type="ranger-env" if-key="ranger_kms_max_heap_size" if-key-state="absent"/>
+          </definition>
+        </changes>
+      </component>
+    </service>
+
+  </services>
+</upgrade-config-changes>

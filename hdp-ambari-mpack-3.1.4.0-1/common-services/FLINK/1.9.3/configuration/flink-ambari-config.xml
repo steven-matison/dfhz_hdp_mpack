@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ 
+<configuration>
+
+  <!-- params for service -->
+
+  <property>
+    <name>flink_install_dir</name>
+    <value>/opt/flink</value>
+    <description>Location to install Flink</description>
+  </property> 
+
+  <property>
+    <name>flink_numcontainers</name>
+    <value>1</value>
+    <description>Number of YARN container to allocate (=Number of Task Managers)</description>
+  </property> 
+  
+  <property>
+    <name>flink_numberoftaskslots</name>
+    <value>1</value>
+    <description>Number of task slots in each container</description>
+  </property> 
+  
+  <property>
+    <name>flink_appname</name>
+    <value>flinkapp-from-ambari</value>
+    <description>Flink application name</description>
+  </property> 
+
+  <property>
+    <name>flink_queue</name>
+    <value>default</value>
+    <description>YARN queue to schedule Flink job on</description>
+  </property> 
+
+  <property>
+    <name>flink_streaming</name>
+    <value>false</value>
+    <description>If true, Flink will be started in streaming mode: to be used when only streaming jobs will be executed on Flink</description>
+  </property> 
+  
+  <property>
+    <name>flink_jobmanager_memory</name>
+    <value>768</value>
+    <description>Memory for JobManager Container [in MB]. Must be at least 768</description>
+  </property> 
+      
+  <property>
+    <name>flink_container_memory</name>
+    <value>1024</value>
+    <description>Memory per TaskManager Container [in MB]</description>
+  </property> 
+        
+
+  <property>
+    <name>setup_prebuilt</name>
+    <value>false</value>
+    <description>If false, will compile Flink from source instead</description>
+  </property>   
+  
+
+  <property>
+    <name>hadoop_conf_dir</name>
+    <value>/etc/hadoop/conf</value>
+    <description>Hadoop conf dir. Needed to submit to YARN</description>
+  </property>   
+
+  <property>
+    <name>flink_download_url</name>
+    <value>http://us.mirrors.quenda.co/apache/flink/flink-1.9.3/flink-1.9.3-bin-scala_2.11.tgz</value>
+    <description>Snapshot download location. Downloaded when setup_prebuilt is true</description>
+  </property>
+
+  <property>
+    <name>flink_hadoop_shaded_jar</name>
+    <value>https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-hadoop2/2.6.5-1.8.1/flink-shaded-hadoop2-2.6.5-1.8.1.jar</value>
+    <description>Flink shaded hadoop jar download location. Downloaded when setup_prebuilt is true</description>
+  </property>
+</configuration>
