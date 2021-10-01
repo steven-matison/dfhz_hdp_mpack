@@ -56,7 +56,7 @@
 
   <property>
     <name>setup_prebuilt</name>
-    <value>false</value>
+    <value>true</value>
     <description>If false, will compile Flink from source instead</description>
   </property>   
   
@@ -69,7 +69,7 @@
 
   <property>
     <name>flink_download_url</name>
-    <value>http://us.mirrors.quenda.co/apache/flink/flink-1.9.3/flink-1.9.3-bin-scala_2.11.tgz</value>
+    <value>https://archive.apache.org/dist/flink/flink-1.9.3/flink-1.9.3-bin-scala_2.11.tgz</value>
     <description>Snapshot download location. Downloaded when setup_prebuilt is true</description>
   </property>
 
